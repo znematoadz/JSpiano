@@ -13,8 +13,8 @@ function addClass(e) {
     this.classList.remove("playing");  
   };
  
-  const keys = document.querySelectorAll('.key').forEach(key => key.addEventListener('transitionend', removeClass));
-  
+  const keys = document.querySelectorAll('.key')
+  keys.forEach(key => key.addEventListener('transitionend', removeClass));
   window.addEventListener('keydown', addClass);
 
   keys.forEach(key => key.addEventListener("click", clickPlay));
