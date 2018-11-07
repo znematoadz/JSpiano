@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JS Mini Piano</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  
+  <div class="keys">
+      <div class="info">
+        <div class="container">
+          <h1>PIANO</h1>
+        <h2>The matching keys from left to right on a standard US keyboard <br/>
+          <hr/>
+          Black keys: &nbsp;    W &nbsp;  E &nbsp; &nbsp; &nbsp; &nbsp;  T &nbsp;  Y &nbsp;  U <br/>
+          White keys:&nbsp;  A &nbsp;  S &nbsp;  D &nbsp;  F &nbsp;  G &nbsp;  H &nbsp; J
+        </h2>
+      </div>
+      </div>
+    <button id="C" data-key="65" class="key white">
+      <p>C</p>
+      <span class="sound">Do</span>
+      
+    </button>
+    <button id="Csharp" data-key="87" class="key black">
+        <p>C# <hr/> Db</p>
+      </button>
+    <button id="D" data-key="83" class="key white">
+      <p>D</p>
+      <span class="sound">Re</span>
+    </button>
+    <button id="Dsharp" data-key="69" class="key black">
+        <p>D# <hr/> Eb</p>
+      </button>
+    <button id="E" data-key="68" class="key white">
+      <p>E</p>
+      <span class="sound">Mi</span>
+    </button>
+    
+    <button id="F" data-key="70" class="key ">
+      <p>F</p>
+      <span class="sound">Fa</span>
+    </button>
+    <button id="FSharp" data-key="84" class="key black">
+        <p>F# <hr/> Gb</p>
+      </button>
+    <button id="G" data-key="71" class="key white">
+      <p>G</p>
+      <span class="sound">Sol</span>
+    </button>
+    <button id="GSharp" data-key="89" class="key black">
+        <p>G# <hr/> Ab</p>
+      </button>
+    <button id="A" data-key="72" class="key white">
+      <p>A</p>
+      <span class="sound">La</span>
+    </button>
+    <button id="ASharp" data-key="85" class="key black">
+        <p>A# <hr/> Bb</p>
+      </button>
+    <button id="B" data-key="74" class="key white">
+      <p>B</p>
+      <span class="sound">Si</span>
+    </button>
+    
+  </div>
+
+  <audio preload="auto" data-key="65" src="https://raw.githubusercontent.com/pffy/wav-piano-sound/master/wav/c1.wav"></audio> 
+  <audio preload="auto" data-key="87" src="https://raw.githubusercontent.com/pffy/wav-piano-sound/master/wav/c1s.wav"></audio> 
+  <audio preload="auto" data-key="83" src="https://raw.githubusercontent.com/pffy/wav-piano-sound/master/wav/d1.wav"></audio>  
+  <audio preload="auto" data-key="69" src="https://raw.githubusercontent.com/pffy/wav-piano-sound/master/wav/d1s.wav"></audio> 
+  <audio preload="auto" data-key="68" src="https://raw.githubusercontent.com/pffy/wav-piano-sound/master/wav/e1.wav"></audio> 
+  <audio preload="auto" data-key="70" src="https://raw.githubusercontent.com/pffy/wav-piano-sound/master/wav/f1.wav"></audio> 
+  <audio preload="auto" data-key="84" src="https://raw.githubusercontent.com/pffy/wav-piano-sound/master/wav/f1s.wav"></audio> 
+  <audio preload="auto" data-key="71" src="https://raw.githubusercontent.com/pffy/wav-piano-sound/master/wav/g1.wav"></audio> 
+  <audio preload="auto" data-key="89" src="https://raw.githubusercontent.com/pffy/wav-piano-sound/master/wav/g1s.wav"></audio> 
+  <audio preload="auto" data-key="72" src="https://raw.githubusercontent.com/pffy/wav-piano-sound/master/wav/a1.wav"></audio> 
+  <audio preload="auto" data-key="85" src="https://raw.githubusercontent.com/pffy/wav-piano-sound/master/wav/a1s.wav"></audio> 
+  <audio preload="auto" data-key="74" src="https://raw.githubusercontent.com/pffy/wav-piano-sound/master/wav/b1.wav"></audio> 
+  
+<script src="main.js"></script>
+
+
+</body>
+</html>
