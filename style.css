@@ -1,31 +1,48 @@
 html {
   font-size: 10px;
-  background: url(https://images.unsplash.com/photo-1512733596533-7b00ccf8ebaf?ixlib=rb-0.3.5&s=8b83853e0b88592d8b4eab87d555d17b) center center;
-  background-size: cover;
 }
 
-body,html {
+body,
+html {
+  height: 100vh;
+  background-color: #768cb8;
   margin: 0;
   padding: 0;
-  font-family: Railway, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: Railway, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-hr {
-  color: beige;
-}
-
-.info {
-  flex: 1 1 100vw;
-  text-align: center;
-  align-self: flex-end;
-}
 .container {
-  display: inline-block;
-  background: rgba(255, 255, 255, 0.329);
-  color: rgb(197, 196, 196);
-  padding: 1rem;
-  border-radius: 1rem; 
-  width: 60%;
+  transform: translateY(20%);
+  background: #222;
+  border-radius: 1rem;
+  margin: auto;
+  max-width: 750px;
+}
+
+.piano {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100px;
+  box-shadow: 0 20px 0px #111;
+}
+
+.display {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #a8c64e;
+  width: 100px;
+  height: 80%;
+  font-family: "Press Start 2P", cursive;
+  border-radius: 5%;
+  box-shadow: inset 0 0 50px #3c412c;
+}
+
+.display span {
+  align-self: center;
+  color: #3c412c;
 }
 
 h1 {
@@ -35,48 +52,61 @@ h1 {
   border: 2px solid rgb(77, 139, 175);
   border-radius: 1rem;
   display: inline-block;
-  padding-right: .1em;
-  padding-left: .1em;
+  padding-right: 0.1em;
+  padding-left: 0.1em;
 }
 
 .keys {
   display: flex;
-  flex-wrap: wrap;
-  flex: 1;
-  min-height: 100vh;
+  flex-flow: row;
+  flex: 1 1 auto;
   align-items: center;
   justify-content: center;
+  padding: 2rem;
 }
 
 .key {
-  flex: 0 1 auto;
-  border: .4rem solid black;
-  border-radius: 0 0 1.5rem 1.5rem;
-  
+  border: 1px solid #bbb;
+  border-radius: 0 0 1rem 1rem;
+  cursor: pointer;
   font-size: 1.5rem;
-  padding: 12rem .5rem;
-  transition: all .07s ease;
+  padding: 12rem 0.5rem;
+  transition: all 0.07s ease;
   width: 10rem;
   text-align: center;
   color: rgb(0, 0, 0);
-  background: rgba(255, 255, 255, 0.76);
-  text-shadow: 0 0 .5rem rgb(122, 120, 120);
+  background: rgba(255, 255, 255);
+  text-shadow: 0 0 0.5rem rgb(122, 120, 120);
   z-index: 0;
+  outline: none;
+  overflow: hidden;
 }
 .white {
   margin-left: -1.75em;
-  
+  margin-right: 0;
+  box-shadow: 0 15px #999;
+  overflow: hidden;
+}
+
+.nosharp {
+  box-shadow: 0 15px #999;
+  margin-left: -0.2em;
 }
 
 .black {
   color: rgb(255, 255, 255);
-  padding: 4rem .1rem;
+  padding: 4rem 0.1rem;
   width: 5rem;
-  margin-top: -12em;
-  background: rgb(0, 0, 0);
+  margin-top: -11.7em;
+  background: #222;
   margin-left: -1.75em;
   border: none;
   z-index: 1;
+  box-shadow: 0 4px 0px 3px #000;
+}
+
+.black:active {
+  background: #000;
 }
 
 .black p {
@@ -84,23 +114,83 @@ h1 {
 }
 
 .playing {
-  transform: scale(1.1);
-  border-color: #ffc600;
-  box-shadow: 0 0 1rem #ffbf00;
+  transform: scale(0.99);
+  box-shadow: 0 5px;
 }
-
-
 
 p {
   display: block;
   font-size: 4rem;
-  margin-bottom: 0; 
+  margin-bottom: 0;
 }
 
 .sound {
   margin-top: 0;
   font-size: 1.7rem;
   text-transform: uppercase;
-  letter-spacing: .1rem;
+  letter-spacing: 0.1rem;
   color: #a78200;
+}
+
+@media screen and (max-width: 700px) {
+  html {
+    font-size: 9px;
+  }
+  .white,
+  .nosharp {
+    box-shadow: 0 12px #999;
+  }
+  .black {
+    box-shadow: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 8px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  html {
+    font-size: 7px;
+  }
+
+  .white,
+  .nosharp {
+    box-shadow: 0 10px #999;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  html {
+    font-size: 6px;
+  }
+  .white,
+  .nosharp {
+    box-shadow: 0 8px #999;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  html {
+    font-size: 5px;
+  }
+
+  .white,
+  .nosharp {
+    box-shadow: 0 3px #999;
+  }
+}
+
+@media screen and (max-width: 250px) {
+  html {
+    font-size: 4px;
+  }
+}
+
+@media screen and (max-width: 200px) {
+  html {
+    font-size: 3px;
+  }
 }

@@ -2,70 +2,78 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
   <title>JS Mini Piano</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+
+
 </head>
 <body>
 
+  <div class="container">
+    <div class="piano">
+      <div class="display"><br/>
+        <i class="fa fa-music "></i><span>PIANO</span><i class="fa fa-music "></i>
+        <br/>
+        
+        
+      </div>
+    </div>
   
-  <div class="keys">
-      <div class="info">
-        <div class="container">
-          <h1>PIANO</h1>
-        <h2>The matching keys from left to right on a standard US keyboard <br/>
-          <hr/>
-          Black keys: &nbsp;    W &nbsp;  E &nbsp; &nbsp; &nbsp; &nbsp;  T &nbsp;  Y &nbsp;  U <br/>
-          White keys:&nbsp;  A &nbsp;  S &nbsp;  D &nbsp;  F &nbsp;  G &nbsp;  H &nbsp; J
-        </h2>
-      </div>
-      </div>
-    <button id="C" data-key="65" class="key white">
-      <p>C</p>
-      <span class="sound">Do</span>
+<div class="keys">
+  
+    <button data-key="65" class="key nosharp">
+      <p>A</p>
+      <span class="sound">C</span>
       
     </button>
-    <button id="Csharp" data-key="87" class="key black">
-        <p>C# <hr/> Db</p>
+    <button data-key="87" class="key black">
+        <p>W <hr/> C#</p>
       </button>
-    <button id="D" data-key="83" class="key white">
+    <button data-key="83" class="key white">
+      <p>S</p>
+      <span class="sound">D</span>
+    </button>
+    <button data-key="69" class="key black">
+        <p>E <hr/> D#</p>
+      </button>
+    <button data-key="68" class="key white">
       <p>D</p>
-      <span class="sound">Re</span>
+      <span class="sound">E</span>
     </button>
-    <button id="Dsharp" data-key="69" class="key black">
-        <p>D# <hr/> Eb</p>
-      </button>
-    <button id="E" data-key="68" class="key white">
-      <p>E</p>
-      <span class="sound">Mi</span>
-    </button>
-    
-    <button id="F" data-key="70" class="key ">
+
+    <button data-key="70" class="key nosharp">
       <p>F</p>
-      <span class="sound">Fa</span>
+      <span class="sound">F</span>
     </button>
-    <button id="FSharp" data-key="84" class="key black">
-        <p>F# <hr/> Gb</p>
+    <button data-key="84" class="key black">
+        <p>T <hr/> F#</p>
       </button>
-    <button id="G" data-key="71" class="key white">
+    <button data-key="71" class="key white">
       <p>G</p>
-      <span class="sound">Sol</span>
+      <span class="sound">G</span>
     </button>
-    <button id="GSharp" data-key="89" class="key black">
-        <p>G# <hr/> Ab</p>
+    <button data-key="89" class="key black">
+        <p>Y <hr/> G#</p>
       </button>
-    <button id="A" data-key="72" class="key white">
-      <p>A</p>
-      <span class="sound">La</span>
+    <button data-key="72" class="key white">
+      <p>H</p>
+      <span class="sound">A</span>
     </button>
-    <button id="ASharp" data-key="85" class="key black">
-        <p>A# <hr/> Bb</p>
+    <button data-key="85" class="key black">
+        <p>U <hr/> A#</p>
       </button>
-    <button id="B" data-key="74" class="key white">
-      <p>B</p>
-      <span class="sound">Si</span>
+    <button data-key="74" class="key white">
+      <p>J</p>
+      <span class="sound">B</span>
     </button>
-    
-  </div>
+  
+</div>
+</div>
+  
 
   <audio  data-key="65" src="https://raw.githubusercontent.com/LFeh/piano/master/src/medias/523-C.mp3"></audio> 
   <audio  data-key="87" src="https://raw.githubusercontent.com/LFeh/piano/master/src/medias/545-C-sharp.mp3"></audio> 
